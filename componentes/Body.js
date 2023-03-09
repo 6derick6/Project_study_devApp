@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, Image, StyleSheet } from 'react-native';
+import styleExterno from '../styles';
 
 const Body = () => {
 
@@ -8,7 +9,7 @@ const Body = () => {
         <View style={styles.view}>
             
             <Image style={styles.image} source={{uri: 'https://cdn.motor1.com/images/mgl/PzJJ8/s3/vw-golf-gti-25th-anniversary---leilao-uk.jpg'}} />
-            <Text style={styles.text}>Ola do arquivo Body</Text>
+            <Text style={styleExterno.fontStyle}>Ola do arquivo Body</Text>
             
         </View>
     );
