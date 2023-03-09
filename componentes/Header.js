@@ -1,15 +1,30 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 const Header = () => {
 
     return(
-        <View style={{backgroundColor:'#069',padding:20}}>
-            <Text style={{textAlign:'center',fontSize:30,color:'white'}}>App Música</Text>
+        <View style={styles.view}>
+            <Text style={styles.textStyle}>App Música</Text>
         </View>
     );
 
 
 }
+
+const styles = StyleSheet.create({
+
+    view:{
+        backgroundColor:'#069',
+        padding:20
+    },
+
+    textStyle:{
+        textAlign:'center',
+        fontSize:30,
+        color:'white'
+    }
+
+});
 
 export default Header;
