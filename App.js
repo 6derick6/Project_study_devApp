@@ -6,11 +6,31 @@ import Body from './componentes/Body';
 
 export default class App extends React.Component{
 
+  constructor(props){
+    super(props);
+    this.mostrarTexto = true;
+    this.mostrarBotaoComTexto = false;
+  }
+
   render(){
+
     return (
       <ScrollView style={{marginTop:30,flex:1}}>
-          <Header></Header>
-          <Body></Body>
+        {
+          (this.mostrarTexto)
+          ?
+          <Text>Texto</Text>
+          :
+          <View></View>
+        }
+
+        {
+        (this.mostrarBotaoComTexto)
+        ?
+        <Button title='Botão com Texto'></Button>
+        :
+        <Button title='Botão sem Texto'></Button>
+        }
       </ScrollView>
     );
   }

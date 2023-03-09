@@ -4,8 +4,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
 
     fontStyle:{
-        fontSize:30,
-        backgroundColor:'grey' 
+        fontSize:30
     }
 
 });
