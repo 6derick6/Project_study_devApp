@@ -8,31 +8,38 @@ export default class App extends React.Component{
 
   constructor(props){
     super(props);
-    this.mostrarTexto = true;
-    this.mostrarBotaoComTexto = false;
+    this.mostrarHeader = true;
+  }
+
+  mostrarConteudo(){
+    var mostrarBody = 1;
+    if(this.mostrarHeader && mostrarBody == 1){
+      return (
+        <View>
+          <Header />
+          <Body />
+        </View>
+      );
+    }else {
+      return (
+        
+          <Body />
+        
+      );
+    }
+
   }
 
   render(){
 
-    return (
+    return(
       <ScrollView style={{marginTop:30,flex:1}}>
-        {
-          (this.mostrarTexto)
-          ?
-          <Text>Texto</Text>
-          :
-          <View></View>
-        }
-
-        {
-        (this.mostrarBotaoComTexto)
-        ?
-        <Button title='Botão com Texto'></Button>
-        :
-        <Button title='Botão sem Texto'></Button>
-        }
+      {
+        this.mostrarConteudo()
+      }
       </ScrollView>
-    );
+    )
+    
   }
 }
 
